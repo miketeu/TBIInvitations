@@ -34,6 +34,7 @@
         --tbi-text-color: #f59d55;
         --card-bg-color: white;
         --card-box-shadow: 0 4px 8px 0 rgba(61, 49, 49, 0.4);
+        --date-color: blue;
       }
 
       .card {
@@ -68,6 +69,13 @@
         margin: 1rem;
         padding: 0;
       }
+      li {
+        line-height: 2em;
+      }
+      .date {
+        color: var(--date-color);
+        font-weight: bold;
+      }
     </style>
   </head>
 
@@ -79,7 +87,7 @@
     <div class="card">
       <card>
         <h2>Breakfast Invitation</h2>
-        <p>Wednesday 10th April 2024 07:45 hrs</p>
+        <p>Wednesday 17th April 2024 07:45 hrs</p>
         <h2>West Park Cafe</h2>
         <p>
           Silverston Avenue <br />
@@ -94,22 +102,27 @@
     <div class="card">
       <card>
         <h2>On this day</h2>
-        <p>Wednesday 10th April</p>
+        <p>Wednesday 17th April</p>
         <ul>
           <li>
-            1741 - Frederick II of Prussia defeated Maria Theresa's forces at
-            Mollwitz and conquered Silesia.
-          </li>
-          <li>1912 - The Titanic set sail from Southampton, England.</li>
-          <li>
-            1932 - Paul von Hindenburg was elected president of Germany with 19
-            million votes. Adolf Hitler came in second with 13 million votes.
+            <span class="date">1492</span> Christopher Columbus signs a contract
+            with the Spanish monarchs to find the "Indies" with the stated goal
+            of converting people to Catholicism. This promises him 10% of all
+            riches found, and the governorship of any lands encountered.
           </li>
           <li>
-            1938 - Germany annexed Austria after Austrians had voted in a
-            referundum to merge with Germany.
+            <span class="date">1610</span> English explorer Henry Hudson departs
+            London, England aboard Discovery on his fourth, final and fatal
+            voyage to discover a north west passage to the Pacific
           </li>
-          <li>1944 - Russian troops recaptured Odessa from the Germans.</li>
+          <li>
+            <span class="date">1875</span> Modern Snooker invented by Sir
+            Neville Chamberlain, a bored British officer in Jabalpur, India
+          </li>
+          <li>
+            <span class="date">1930</span> DuPont scientist Elmer K. Bolton
+            invents neoprene using Julius Nieuwland's divinyl acetylene
+          </li>
         </ul>
       </card>
     </div>
