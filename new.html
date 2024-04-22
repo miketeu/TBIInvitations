@@ -23,20 +23,40 @@
     />
     <!-- CSS Styles here  -->
     <style>
-      /* Reset rule */
+      /* ------------ */
+      /* -Reset rule- */
+      /* ------------ */
       *,
       *::before,
       *::after {
         box-sizing: border-box;
       }
+
+      ul[class] {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      ul:not([class]) {
+        font-size: 1rem;
+      }
+
+      /* ---End Reset---- */
+
+      /* ------------------- */
+      /* ---Css Variables--- */
+      /* ------------------- */
       :root {
         --body-bg-color: whitesmoke;
-        --tbi-text-color: #f59d55;
+        --tbi-text-color: rgb(247, 155, 16);
         --card-bg-color: white;
         --card-box-shadow: 0 4px 8px 0 rgba(61, 49, 49, 0.4);
         --date-color: blue;
       }
+      /* ---End css Variables---*/
 
+      /*  card selector for for card elements */
       .card {
         box-shadow: var(--card-box-shadow);
         transition: 0.3s;
@@ -47,13 +67,36 @@
         text-align: center;
         padding: 2rem 0 2rem 0;
       }
+      /* hero selector for background image */
+      .hero {
+        background-image: url(images/WestpkBWVlight.png);
+        box-shadow: var(--card-box-shadow);
+        display: block;
+        max-width: 90%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        margin: 2rem auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      /* hero_text to position and style text in front of background image */
+      .hero_text {
+        text-shadow: 1px 1px 2px black;
+        text-align: center;
+      }
 
       /* Add rounded corners to the top left and the top right corner of the image */
       img {
         border-radius: 5px;
         width: 90%;
       }
-
+      /* Used to include images for special occasions */
+      .guest-img {
+        width: 40%;
+        margin: auto;
+      }
+      /* logo class used for the header box with the company logo */
       .logo {
         margin: auto;
         box-shadow: var(--card-box-shadow);
@@ -62,8 +105,9 @@
 
       h2 {
         color: var(--tbi-text-color);
+        z-index: 1;
       }
-
+      /* ---LIST STYLES--- */
       ul {
         list-style-type: none;
         margin: 1rem;
@@ -72,9 +116,23 @@
       li {
         line-height: 2em;
       }
+      /* ---End list style--- */
+
+      /* date selector used for any text that needs highlighting  */
       .date {
         color: var(--date-color);
         font-weight: bold;
+      }
+
+      /* story class to justify p text in the story */
+      .story {
+        text-align: justify;
+      }
+
+      /* style for paragraph text */
+      p {
+        margin: 2em;
+        line-height: 1.5;
       }
     </style>
   </head>
@@ -84,46 +142,40 @@
       <img src="images/TBILogo.png" alt="TBI Logo" />
     </div>
 
-    <div class="card">
+    <div>
       <card>
-        <h2>Breakfast Invitation</h2>
-        <p>Wednesday 17th April 2024 07:45 hrs</p>
-        <h2>West Park Cafe</h2>
-        <p>
-          Silverston Avenue <br />
-          Bognor Regis, <br />
-          PO21 2RD
-        </p>
+        <div class="hero hero_text">
+          <h2>Breakfast Invitation</h2>
+          <p>Wednesday 24th April 2024 07:45 hrs</p>
+          <h2>West Park Cafe</h2>
+          <p>
+            Silverston Avenue <br />
+            Bognor Regis, <br />
+            PO21 2RD
+          </p>
+        </div>
       </card>
     </div>
     <!-- --------------------- -->
     <!--       on this day     -->
     <!-- --------------------- -->
+
     <div class="card">
       <card>
-        <h2>On this day</h2>
-        <p>Wednesday 17th April</p>
-        <ul>
-          <li>
-            <span class="date">1492</span> Christopher Columbus signs a contract
-            with the Spanish monarchs to find the "Indies" with the stated goal
-            of converting people to Catholicism. This promises him 10% of all
-            riches found, and the governorship of any lands encountered.
-          </li>
-          <li>
-            <span class="date">1610</span> English explorer Henry Hudson departs
-            London, England aboard Discovery on his fourth, final and fatal
-            voyage to discover a north west passage to the Pacific
-          </li>
-          <li>
-            <span class="date">1875</span> Modern Snooker invented by Sir
-            Neville Chamberlain, a bored British officer in Jabalpur, India
-          </li>
-          <li>
-            <span class="date">1930</span> DuPont scientist Elmer K. Bolton
-            invents neoprene using Julius Nieuwland's divinyl acetylene
-          </li>
-        </ul>
+        <img src="dadAndSon.png" alt="" class="guest-img" />
+        <h2>Where did I come from Dad?</h2>
+        <p class="story">
+          “Well, son, I guess one day you will need to find out anyway! <br />
+          Your mom and I first got together in a chat room on Yahoo. <br />
+          Then I set up a date via e-mail with your mom and we met at a
+          cyber-cafe. <br />
+          We sneaked into a secluded room, and googled each other. <br />
+          There your mother agreed to a download from my hard drive. <br />
+          As soon as I was ready to upload, we discovered that neither one of us
+          had used a firewall, and since it was too late to hit the delete
+          button, nine months later a little Pop-Up appeared that said: 'You've
+          got male!'”
+        </p>
       </card>
     </div>
   </body>
