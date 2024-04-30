@@ -10,7 +10,7 @@
     <title>TBI Invitation</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
+
     <script
       src="https://kit.fontawesome.com/20f7e01a36.js"
       crossorigin="anonymous"
@@ -71,13 +71,14 @@
       .hero {
         background-image: url(images/WestpkBWVlight.png);
         box-shadow: var(--card-box-shadow);
-        display: block;
+
         max-width: 90%;
         padding-top: 2rem;
         padding-bottom: 2rem;
         margin: 2rem auto;
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
       }
 
       /* hero_text to position and style text in front of background image */
@@ -89,7 +90,7 @@
       /* Add rounded corners to the top left and the top right corner of the image */
       img {
         border-radius: 5px;
-        width: 90%;
+        margin: 0 10px;
       }
       /* Used to include images for special occasions */
       .guest-img {
@@ -98,9 +99,9 @@
       }
       /* logo class used for the header box with the company logo */
       .logo {
+        width: 90%;
         margin: auto;
         box-shadow: var(--card-box-shadow);
-        width: 90%;
       }
 
       h2 {
@@ -139,44 +140,38 @@
 
   <body>
     <div class="logo">
-      <img src="images/TBILogo.png" alt="TBI Logo" />
+      <img src="images/TBILogo.png" alt="TBI Logo" width="325" />
     </div>
 
-    <div>
-      <card>
-        <div class="hero hero_text">
-          <h2>Breakfast Invitation</h2>
-          <p>Wednesday 24th April 2024 07:45 hrs</p>
-          <h2>West Park Cafe</h2>
-          <p>
-            Silverston Avenue <br />
-            Bognor Regis, <br />
-            PO21 2RD
-          </p>
-        </div>
-      </card>
-    </div>
-    <!-- --------------------- -->
-    <!--       on this day     -->
-    <!-- --------------------- -->
-
-    <div class="card">
-      <card>
-        <img src="dadAndSon.png" alt="" class="guest-img" />
-        <h2>Where did I come from Dad?</h2>
-        <p class="story">
-          “Well, son, I guess one day you will need to find out anyway! <br />
-          Your mom and I first got together in a chat room on Yahoo. <br />
-          Then I set up a date via e-mail with your mom and we met at a
-          cyber-cafe. <br />
-          We sneaked into a secluded room, and googled each other. <br />
-          There your mother agreed to a download from my hard drive. <br />
-          As soon as I was ready to upload, we discovered that neither one of us
-          had used a firewall, and since it was too late to hit the delete
-          button, nine months later a little Pop-Up appeared that said: 'You've
-          got male!'”
+    <card>
+      <div class="hero hero_text">
+        <h2>Breakfast Invitation</h2>
+        <p>Wednesday 1st May 2024 07:45 hrs</p>
+        <h2>West Park Cafe</h2>
+        <p>
+          Silverston Avenue <br />
+          Bognor Regis, <br />
+          PO21 2RD
         </p>
-      </card>
-    </div>
+      </div>
+    </card>
+
+    <!-- ------------------------------>
+    <!----     on this day         ---->
+    <!--    Use this card to         -->
+    <!--include some item of interest-->
+    <!-- ------------------------------>
+
+    <card class="card">
+      <h2>On This day 1st May</h2>
+
+      <p>
+        May 1st is celebrated as International Workers’ Day and
+        <span class="date">Batman Day</span>.
+        <img src="images/batman.jpg" alt="TBI Logo" width="90%" />
+        Today is the 122nd day of 2024, and there are 244 days remaining until
+        the end of the year.
+      </p>
+    </card>
   </body>
 </html>
