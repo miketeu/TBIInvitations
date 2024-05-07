@@ -55,7 +55,10 @@
         --date-color: blue;
       }
       /* ---End css Variables---*/
-
+      body {
+        max-width: 90%;
+        margin: 0 auto;
+      }
       /*  card selector for for card elements */
       .card {
         box-shadow: var(--card-box-shadow);
@@ -85,6 +88,7 @@
       .hero_text {
         text-shadow: 1px 1px 2px black;
         text-align: center;
+        text-wrap: balance;
       }
 
       /* Add rounded corners to the top left and the top right corner of the image */
@@ -99,8 +103,8 @@
       }
       /* logo class used for the header box with the company logo */
       .logo {
-        width: 90%;
-        margin: auto;
+        max-width: 90%;
+        margin: 2rem auto 0 auto;
         box-shadow: var(--card-box-shadow);
       }
 
@@ -140,38 +144,46 @@
 
   <body>
     <div class="logo">
-      <img src="images/TBILogo.png" alt="TBI Logo" width="325" />
+      <img src="images/TBILogo.png" alt="TBI Logo" width="100%" />
     </div>
 
-    <card>
-      <div class="hero hero_text">
-        <h2>Breakfast Invitation</h2>
-        <p>Wednesday 1st May 2024 07:45 hrs</p>
-        <h2>West Park Cafe</h2>
-        <p>
-          Silverston Avenue <br />
-          Bognor Regis, <br />
-          PO21 2RD
-        </p>
-      </div>
-    </card>
+    <div class="hero hero_text">
+      <h2>Breakfast Invitation</h2>
+      <!--Update the date field-->
+      <p>Wednesday 8th May 2024 07:45 hrs</p>
+      <h2>West Park Cafe</h2>
+      <p>
+        Silverston Avenue <br />
+        Bognor Regis, <br />
+        PO21 2RD
+      </p>
+    </div>
 
-    <!-- ------------------------------>
-    <!----     on this day         ---->
-    <!--    Use this card to         -->
-    <!--include some item of interest-->
-    <!-- ------------------------------>
-
-    <card class="card">
-      <h2>On This day 1st May</h2>
+    <!--  
+       on this day        
+       Use this card to         
+       include some item of interest
+    -->
+    <div class="card">
+      <h2>On This day 8th May</h2>
 
       <p>
-        May 1st is celebrated as International Workers’ Day and
-        <span class="date">Batman Day</span>.
-        <img src="images/batman.jpg" alt="TBI Logo" width="90%" />
-        Today is the 122nd day of 2024, and there are 244 days remaining until
-        the end of the year.
+        <span class="date">May 8th 1945</span>. Following Germany's
+        unconditional surrender, World War II in Europe officially ended at
+        midnight on this day in 1945, although the war in the Pacific continued
+        until the Japanese surrender in September.
       </p>
-    </card>
+
+      <p>
+        <span class="date">May 8th 589</span>. Visigothic King Reccared summons
+        the Third Council of Toledo, where he accepts the Catholic faith
+      </p>
+      <p>
+        <span class="date">May 8th 1348 The Plague Arrives in England</span>.
+        Ship from Bordeaux carrying the plague, lands in Melcombe Regis (now
+        Weymouth), Dorset. The beginning of the Terrible Pestilence (Black
+        Death) in England.
+      </p>
+    </div>
   </body>
 </html>
