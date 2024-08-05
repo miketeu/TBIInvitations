@@ -53,7 +53,11 @@
         --card-bg-color: white;
         --card-box-shadow: 0 4px 8px 0 rgba(61, 49, 49, 0.4);
         --date-color: blue;
+
+        --mydate: "Someday 5th";
       }
+
+
       /* ---End css Variables---*/
       body {
         max-width: 90%;
@@ -72,7 +76,7 @@
       }
       /* hero selector for background image */
       .hero {
-        background-image: url("images/WestpkBWVlight.png ");
+        background-image: url("images/WestpkBWVlight.png");
         box-shadow: var(--card-box-shadow);
        
         max-width: 90%;
@@ -128,8 +132,12 @@
       /* date selector used for any text that needs highlighting  */
       .date {
         color: var(--date-color);
+        font-weight: bold;}
+        
+     .dynamic-text {
         font-weight: bold;
-      }
+        color: blue;}
+      
 
       /* story class to justify p text in the story */
       .story {
@@ -145,6 +153,7 @@
   </head>
 
   <body>
+
     <div class="logo">
       <img src="images/TBILogo.png" alt="TBI Logo" width="100%" />
     </div>
@@ -152,7 +161,9 @@
     <div class="hero hero_text hero_img">
       <h2>Breakfast Invitation</h2>
       <!--Update the date field-->
-      <p>Wednesday August 7th 2024 07:45 hrs</p>
+      <p> 
+        Wednesday <span class="dynamic-text"> </span> 2024 07:45 hrs
+      </p>
       <h2>West Park Cafe</h2>
       <p>
         Silverston Avenue <br />
@@ -167,7 +178,7 @@
        include some item of interest
     -->
     <div class="card">
-      <h2>On This day August 7th</h2>
+      <h2>On This day <span class="dynamic-text"> </span></h2>
 
       <p>
         <span class="date"> 1936 A Finnish quinella :</span><br> <br>
@@ -189,5 +200,18 @@
           He set 22 official world records and won a total of nine gold and three silver medals in his 12 events in the Olympic Games.
       </p>-->
     </div>
+    <script>
+      // Define the variable string
+      var variableString = "August 7th";
+
+      // Select all elements with the class 'dynamic-text'
+      var elements = document.querySelectorAll('.dynamic-text');
+
+      // Loop through the elements and set their text content to the variable string
+      elements.forEach(function(element) {
+          element.textContent = variableString;
+      });
+  </script>
+
   </body>
 </html>
