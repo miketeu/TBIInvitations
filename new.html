@@ -76,22 +76,42 @@
       }
       /* hero selector for background image */
       .hero {
-        background-image: url("images/WestpkBWVlight.png");
-        box-shadow: var(--card-box-shadow);
-       
-        max-width: 90%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+        
+
+        &::before{
+          content: '';
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          bottom: 0PX;
+          left: 0px;
+          background-image: url("images/Cafefront.jpg");
+          box-shadow: var(--card-box-shadow);
+          background-size: cover;
+          background-position: top center;
+          opacity: 0.25;
+         }
+        /* 
         padding-top: 2rem;
         padding-bottom: 2rem;
         margin: 2rem auto;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center;*/
       }
 
  
 
       /* hero_text to position and style text in front of background image */
       .hero_text {
+        padding: 2rem 0;
+        display: block;
         text-shadow: 1px 1px 2px black;
         text-align: center;
         text-wrap: balance;
@@ -181,28 +201,27 @@
       <h2>On This day <span class="dynamic-text"> </span></h2>
 
       <p>
-        <span class="date"> 1936 A Finnish quinella :</span><br> <br>
-        A Finnish quinella in the 5,000m final at the Berlin Olympics; Gunnar Höckert runs an Olympic record to beat teammate Lauri Lehtinen</p>
-       <img src="" alt="">
-       <p></p>
-      
-       
-      <p>
-        <span class="date">1944 IBM dedicates the first program-controlled calculator: </span>. <br>
-         IBM dedicates the first program-controlled calculator, the Automatic Sequence Controlled Calculator (known best as the Harvard Mark I)
-      <p>
-<img src="images/popularmechanics1944.jpg" class="guest-img">
-
+        <span class="date"> 1040 King Duncan I of Scotland killed  :</span><br> <br>
+        King Duncan I of Scotland killed in battle against his first cousin and rival Macbeth (not murdered in his sleep as in Shakespeare's play). The latter does succeed him as King.</p>
         <!--
+       <img src="" alt="">
+-->
+      <p>
+        <span class="date">1945 V-J Day: </span>. <br>
+        V-J Day, the Empire of Japan surrenders unconditionally to the Allies, ending World War II (August 15 in Japan and other countries depending on the time zone)
+      <p>
+<!--
+<img src="" class="guest-img">
+      -->
+        
         <span class="date">
-          1926 Paavo Nurmi the 'Flying Fin' </span><br>
-          Paavo Nurmi walks world record 4x1500m
-          He set 22 official world records and won a total of nine gold and three silver medals in his 12 events in the Olympic Games.
-      </p>-->
+          1952 Alan Turing :</span><br>
+         Alan Turing's ground-breaking paper on mathematical biology “The Chemical Basis of Morphogenesis” is published
+      </p>
     </div>
     <script>
       // Define the variable string
-      var variableString = "August 7th";
+      var variableString = "August 14th";
 
       // Select all elements with the class 'dynamic-text'
       var elements = document.querySelectorAll('.dynamic-text');
