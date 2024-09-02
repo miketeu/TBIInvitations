@@ -53,16 +53,16 @@
         --card-bg-color: white;
         --card-box-shadow: 0 4px 8px 0 rgba(61, 49, 49, 0.4);
         --date-color: blue;
-
-        --mydate: "Someday 5th";
+        
       }
 
-
       /* ---End css Variables---*/
+
       body {
         max-width: 90%;
         margin: 0 auto;
       }
+
       /*  card selector for for card elements */
       .card {
         box-shadow: var(--card-box-shadow);
@@ -74,6 +74,7 @@
         text-align: center;
         padding: 2rem 0 2rem 0;
       }
+
       /* hero selector for background image */
       .hero {
         position: relative;
@@ -83,7 +84,7 @@
         width: 90%;
         margin: 0 auto;
         
-
+        /* Child to control image separate to hero text. */
         &::before{
           content: '';
           position: absolute;
@@ -97,16 +98,8 @@
           background-position: top center;
           opacity: 0.25;
          }
-        /* 
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        margin: 2rem auto;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;*/
+    
       }
-
- 
 
       /* hero_text to position and style text in front of background image */
       .hero_text {
@@ -122,11 +115,13 @@
         border-radius: 5px;
         margin: 0 10px;
       }
+
       /* Used to include images for special occasions */
       .guest-img {
         width: 90%;
         margin: auto;
       }
+
       /* logo class used for the header box with the company logo */
       .logo {
         max-width: 90%;
@@ -138,15 +133,18 @@
         color: var(--tbi-text-color);
         z-index: 1;
       }
+
       /* ---LIST STYLES--- */
       ul {
         list-style-type: none;
         margin: 1rem;
         padding: 0;
       }
+
       li {
         line-height: 2em;
       }
+
       /* ---End list style--- */
 
       /* date selector used for any text that needs highlighting  */
@@ -158,7 +156,6 @@
         font-weight: bold;
         color: blue;}
       
-
       /* story class to justify p text in the story */
       .story {
         text-align: justify;
@@ -169,7 +166,21 @@
         margin: 2em;
         line-height: 1.5;
       }
+
+      hr {
+        width: 80%;
+        margin: 2rem;
+      }
+      .caption {
+        margin: 2em;
+        line-height: 1.5;
+        font-size: 1rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
     </style>
+
   </head>
 
   <body>
@@ -194,34 +205,45 @@
 
     <!--  
        on this day        
-       Use this card to         
+       Use these cards to         
        include some item of interest
     -->
+
+    <!-- Card section header -->
     <div class="card">
       <h2>On This day <span class="dynamic-text"> </span></h2>
+      <!-- End card header -->
 
       <p>
-        <span class="date"> 1040 King Duncan I of Scotland killed  :</span><br> <br>
-        King Duncan I of Scotland killed in battle against his first cousin and rival Macbeth (not murdered in his sleep as in Shakespeare's play). The latter does succeed him as King.</p>
+        <span class="date"> 925 King Athelstan  :</span>
+        <br>
+        King Athelstan of the West Saxons became the first king to rule all of England.</p>
         <!--
+          Use this code to include 'ad hoc' images.
        <img src="" alt="">
--->
+        -->
+        <img src="https://cdn.britannica.com/93/5993-004-48FB62E3/detail-Athelstan-collection-manuscript-illumination-Corpus-Christi.jpg?w=400&h=200&c=crop" alt=" Portrait of King Athelstan" class="guest-img">
       <p>
-        <span class="date">1945 V-J Day: </span>. <br>
-        V-J Day, the Empire of Japan surrenders unconditionally to the Allies, ending World War II (August 15 in Japan and other countries depending on the time zone)
-      <p>
-<!--
-<img src="" class="guest-img">
-      -->
-        
-        <span class="date">
-          1952 Alan Turing :</span><br>
-         Alan Turing's ground-breaking paper on mathematical biology “The Chemical Basis of Morphogenesis” is published
+
+        <hr>
+        <span class="date">Volt and Ohm :  </span>. <br>
+        British Association for Advancement of Science proposes standard units of electrical measurement (the Volt after Alessandro Volta; the Ohm after Georg Ohm) at its 31st annual meeting (Manchester, England)
       </p>
+      <figure>
+    <img src="https://www.onthisday.com/images/people/alessandro-volta.jpg?w=360" alt="Portrait of Alessandro Volta"  class="guest-img">
+    <figcaption class="caption">Physicist and Inventor <br>Alessandro Volta</figcaption>
+      </figure>
+    <img src="https://www.onthisday.com/images/people/georg-ohm.jpg?w=360" alt="Portrait of Georg Ohm"  class="guest-img">
+    <figcaption class="caption">Physicist and Mathematician <br>Georg Ohm</figcaption>
+
+     <hr>
+
+  
+  
     </div>
     <script>
       // Define the variable string
-      var variableString = "August 14th";
+      var variableString = "September 4th";
 
       // Select all elements with the class 'dynamic-text'
       var elements = document.querySelectorAll('.dynamic-text');
