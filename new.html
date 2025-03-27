@@ -4,255 +4,277 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"><![endif]-->
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>TBI Invitation</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script
-      src="https://kit.fontawesome.com/20f7e01a36.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <!-- CSS Styles here  -->
-    <style>
-      /* ------------ */
-      /* -Reset rule- */
-      /* ------------ */
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>TBI Invitation</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      ul[class] {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
+  <script src="https://kit.fontawesome.com/20f7e01a36.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+  <!-- CSS Styles here  -->
+  <style>
+    /* ------------ */
+    /* -Reset rule- */
+    /* ------------ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
-      ul:not([class]) {
-        font-size: 1rem;
-      }
+    ul[class] {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
 
-      /* ---End Reset---- */
+    ul:not([class]) {
+      font-size: 1rem;
+    }
 
-      /* ------------------- */
-      /* ---Css Variables--- */
-      /* ------------------- */
-      :root {
-        --body-bg-color: whitesmoke;
-        --tbi-text-color: rgb(247, 155, 16);
-        --card-bg-color: white;
-        --card-box-shadow: 0 4px 8px 0 rgba(61, 49, 49, 0.4);
-        --date-color: blue;
-        
-      }
+    /* ---End Reset---- */
 
-      /* ---End css Variables---*/
+    /* ------------------- */
+    /* ---Css Variables--- */
+    /* ------------------- */
+    :root {
+      --body-bg-color: whitesmoke;
+      --tbi-text-color: rgb(247, 155, 16);
+      --card-bg-color: white;
+      --card-box-shadow: 0 4px 8px 0 rgba(61, 49, 49, 0.4);
+      --date-color: blue;
 
-      body {
-        max-width: 90%;
-        margin: 0 auto;
-      }
+    }
 
-      /*  card selector for for card elements */
-      .card {
+    /* ---End css Variables---*/
+
+    body {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+    /*  card selector for for card elements */
+    .card {
+      box-shadow: var(--card-box-shadow);
+      transition: 0.3s;
+      border-radius: 5px;
+      /* 5px rounded corners */
+      background-color: var(--card-bg-color);
+      width: 90%;
+      margin: 2rem auto;
+      text-align: center;
+      padding: 2rem 0 2rem 0;
+    }
+
+    /* hero selector for background image */
+    .hero {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+
+      /* Child to control image separate to hero text. */
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0PX;
+        left: 0px;
+        background-image: url("https://lh3.googleusercontent.com/p/AF1QipOdp4_rdh5-CJGHPBVxkdnUDaqbdmQvNLA19on3=s680-w680-h510");
         box-shadow: var(--card-box-shadow);
-        transition: 0.3s;
-        border-radius: 5px; /* 5px rounded corners */
-        background-color: var(--card-bg-color);
-        width: 90%;
-        margin: 2rem auto 2rem auto;
-        text-align: center;
-        padding: 2rem 0 2rem 0;
+        background-size: cover;
+        background-position: top center;
+        opacity: 0.25;
       }
 
-      /* hero selector for background image */
-      .hero {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-        margin: 0 auto;
-        
-        /* Child to control image separate to hero text. */
-        &::before{
-          content: '';
-          position: absolute;
-          top: 0px;
-          right: 0px;
-          bottom: 0PX;
-          left: 0px;
-          background-image: url("images/Cafefront.jpg");
-          box-shadow: var(--card-box-shadow);
-          background-size: cover;
-          background-position: top center;
-          opacity: 0.25;
-         }
-    
-      }
+    }
 
-      /* hero_text to position and style text in front of background image */
-      .hero_text {
-        padding: 2rem 0;
-        display: block;
-        text-shadow: 1px 1px 2px black;
-        text-align: center;
-        text-wrap: balance;
-      }
+    /* hero_text to position and style text in front of background image */
+    .hero_text {
+      padding: 2rem 1rem;
+      display: block;
+      text-shadow: 1px 1px 2px black;
+      text-align: center;
+      /* text-wrap: balance; */
+    }
 
-      /* Add rounded corners to the top left and the top right corner of the image */
-      img {
-        border-radius: 5px;
-        margin: 0 10px;
-      }
+    /* Add rounded corners to the top left and the top right corner of the image */
+    img {
+      border-radius: 5px;
+      margin: 0 10px;
+      width: 100%;
+    }
 
-      /* Used to include images for special occasions */
-      .guest-img {
-        width: 90%;
-        margin: auto;
-      }
+    /* Used to include images for special occasions */
+    .guest-img {
+      width: 90%;
+      margin: auto;
+    }
 
-      /* logo class used for the header box with the company logo */
-      .logo {
-        max-width: 90%;
-        margin: 2rem auto 0 auto;
-        box-shadow: var(--card-box-shadow);
-      }
+    /* logo class used for the header box with the company logo */
+    .logo {
+      max-width: 90%;
+      margin: 2rem auto 0 auto;
+      box-shadow: var(--card-box-shadow);
+    }
 
-      h2 {
-        color: var(--tbi-text-color);
-        z-index: 1;
-      }
+    h2 {
+      color: var(--tbi-text-color);
+      z-index: 1;
+    }
 
-      /* ---LIST STYLES--- */
-      ul {
-        list-style-type: none;
-        margin: 1rem;
-        padding: 0;
-      }
+    /* ---LIST STYLES--- */
+    ul {
+      list-style-type: none;
+      margin: 1rem;
+      padding: 0;
+    }
 
-      li {
-        line-height: 2em;
-      }
+    li {
+      line-height: 2em;
+    }
 
-      /* ---End list style--- */
+    /* ---End list style--- */
 
-      /* date selector used for any text that needs highlighting  */
-      .date {
-        color: var(--date-color);
-        font-weight: bold;}
-        
-     .dynamic-text {
-        font-weight: bold;
-        color: blue;}
-      
-      /* story class to justify p text in the story */
-      .story {
-        text-align: justify;
-      }
+    /* date selector used for any text that needs highlighting  */
+    .date {
+      color: var(--date-color);
+      font-weight: bold;
+    }
 
-      /* style for paragraph text */
-      p {
-        margin: 2em;
-        line-height: 1.5;
-      }
+    .dynamic-text {
+      font-weight: bold;
+      color: blue;
+    }
 
-      hr {
-        width: 80%;
-        margin: 2rem;
-      }
-      .caption {
-        margin: 2em;
-        line-height: 1.5;
-        font-size: 1rem;
-      }
-      h2 {
-        font-size: 1.2rem;
-      }
-    </style>
+    /* story class to justify p text in the story */
+    .story {
+      text-align: justify;
+    }
 
-  </head>
+    /* style for paragraph text */
+    p1 {
+      width: 70%;
+      line-height: 1.5;
+      text-align: justify;
+    }
 
-  <body>
+    hr {
+      width: 80%;
+      margin: 2rem;
+    }
 
-    <div class="logo">
-      <img src="images/TBILogo.png" alt="TBI Logo" width="100%" />
-    </div>
+    .caption {
+      margin: 0 2em;
+      line-height: 1.5;
+      font-size: smaller;
+      color: grey;
+    }
 
-    <div class="hero hero_text hero_img">
-      <h2>Breakfast Invitation</h2>
-      <!--Update the date field-->
-      <p> 
-        Wednesday <span class="dynamic-text"> </span> 2024 07:45 hrs
-      </p>
-      <h2>West Park Cafe</h2>
-      <p>
-        Silverston Avenue <br />
-        Bognor Regis, <br />
-        PO21 2RD
-      </p>
-    </div>
+    h2 {
+      font-size: 1.2rem;
+    }
+  </style>
 
-    <!--  
+</head>
+
+<body>
+
+  <div class="logo">
+    <img src="images/TBILogo.png" alt="TBI Logo" width="100%" />
+  </div>
+
+  <div class="hero hero_text hero_img">
+    <h2>Breakfast Invitation</h2>
+    <!--Update the date field-->
+    <p>
+      <span class="dynamic-text"> </span> @ 08:00hrs
+    </p>
+    <h2>The Hatter’s Inn</h2>
+    <p>2–10 Queensway, Bognor Regis, <br> West Sussex, PO21 1QT<br>
+      PO21 2RB
+    </p>
+  </div>
+
+
+
+  <!--  
        on this day        
        Use these cards to         
        include some item of interest
     -->
 
-    <!-- Card section header -->
-    <div class="card">
-      <h2>On This day <span class="dynamic-text"> </span></h2>
-      <!-- End card header -->
+  <!-- Card section header -->
+  <!--
+  <div class="card">
+    <h2></h2>
+    <h3><span class="dynamic-text"></span></h3>
+    <p>
 
-      <p>
-        <span class="date"> 925 King Athelstan  :</span>
-        <br>
-        King Athelstan of the West Saxons became the first king to rule all of England.</p>
-        <!--
-          Use this code to include 'ad hoc' images.
-       <img src="" alt="">
-        -->
-        <img src="https://cdn.britannica.com/93/5993-004-48FB62E3/detail-Athelstan-collection-manuscript-illumination-Corpus-Christi.jpg?w=400&h=200&c=crop" alt=" Portrait of King Athelstan" class="guest-img">
-      <p>
+    </p>
+  </div>-->
+  <!-- End card header -->
 
-        <hr>
-        <span class="date">Volt and Ohm :  </span>. <br>
-        British Association for Advancement of Science proposes standard units of electrical measurement (the Volt after Alessandro Volta; the Ohm after Georg Ohm) at its 31st annual meeting (Manchester, England)
-      </p>
-      <figure>
-    <img src="https://www.onthisday.com/images/people/alessandro-volta.jpg?w=360" alt="Portrait of Alessandro Volta"  class="guest-img">
-    <figcaption class="caption">Physicist and Inventor <br>Alessandro Volta</figcaption>
-      </figure>
-    <img src="https://www.onthisday.com/images/people/georg-ohm.jpg?w=360" alt="Portrait of Georg Ohm"  class="guest-img">
-    <figcaption class="caption">Physicist and Mathematician <br>Georg Ohm</figcaption>
 
-     <hr>
+<!--
+  <div class="card">
+   
+    <p></p>
 
-  
-  
+     <img
+     src="" style: width: 80%
+     alt="">
+   <figcaption class="caption">
+    
+
+   </figcaption>
+
+    Use this code to include 'ad hoc' images.  
+
+  </div>
+-->
+  <!--
+    <img
+      src=""
+      alt="">
+    <figcaption class="caption">
+     
+
+    </figcaption>
+
+  </div>
+
+
+  <br>
+
+  <p1>
+
+    </p>
+    <hr>
     </div>
+    -->
     <script>
       // Define the variable string
-      var variableString = "September 4th";
+      var variableString = "Wednesday 26th March 2025";
 
       // Select all elements with the class 'dynamic-text'
       var elements = document.querySelectorAll('.dynamic-text');
 
       // Loop through the elements and set their text content to the variable string
-      elements.forEach(function(element) {
-          element.textContent = variableString;
+      elements.forEach(function (element) {
+        element.textContent = variableString;
       });
-  </script>
+    </script>
 
-  </body>
+</body>
+
 </html>
